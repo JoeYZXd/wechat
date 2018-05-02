@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wechat',
-        'USER': 'joey',
-        'PASSWORD': '1qaz@WSX',
-        'HOST': '47.90.240.119',
+        'USER': 'wechat',
+	'HOST': 'rm-0xiha99m9cs8l7483mo.mysql.rds.aliyuncs.com',
+        'PASSWORD': 'W!e2c#hat',
         'PORT': '3306',
     }
 }
