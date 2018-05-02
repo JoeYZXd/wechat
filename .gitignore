@@ -99,10 +99,3 @@ ENV/
 
 # mypy
 .mypy_cache/
-
-# membership module
-membership/__pycache__/
-membership/migrations/__pycache__/
-
-# app module
-wechat/__pycache__/
