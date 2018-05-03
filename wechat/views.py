@@ -9,11 +9,11 @@ def wx(request):
     nonce = parameters.get('nonce')
     echostr = parameters.get('echostr')
     token = "wuchabangwuxihuishanwanda"
-    list = [token, timestamp, nonce]
-    list.sort()
-    sha1 = hashlib.sha1()
-    map(sha1.update, list)
-    hashcode = sha1.hexdigest()
+    sortedList = [token, timestamp, nonce]
+    sortedList.sort()
+    s = "".join(sortedList)
+    print (s)
+    hashcode = hashlib.sha1(s.encode('utf-8')).hexdigest()
     print ("handle/GET func: hashcode, signature: ", hashcode, signature)
     if hashcode == signature:
         return HttpResponse(echostr)
