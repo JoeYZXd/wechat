@@ -21,4 +21,5 @@ urlpatterns = [
     path('membership/', include('membership.urls')),
     path('admin/', admin.site.urls),
     path('wx', views.wx),
+    path('access-token/', views.accessToken),
 ]

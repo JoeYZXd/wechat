@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import hashlib
+from .api import WechatApi
 
 def wx(request):
     parameters = request.GET
@@ -19,3 +20,7 @@ def wx(request):
         return HttpResponse(echostr)
     else:
         return HttpResponse("error")
+
+def accessToken(request):
+    WechatApi.fetchAccessToken()
+    return HttpResponse("Success")
