@@ -12,7 +12,6 @@ class WechatApi():
         try:
             accessToken = BaseProperty.objects.get(code='WECHAT_APP_ACCESS_TOKEN')
             exists = True
-            print ("exists [%s]" %(accessToken))
         except ObjectDoesNotExist:
             print ("Not Exists")
         finally:
@@ -25,7 +24,6 @@ class WechatApi():
                     'secret': appSecret.value
                 }
                 response = requests.get(accessTokenUrl, params = params)
-                print (response.url)
                 if response.status_code == 200:
                     result = response.json()
                     if 'errcode' in result:
